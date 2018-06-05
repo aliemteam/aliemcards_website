@@ -29,7 +29,7 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: devMode ? 'bundle.js' : 'bundle.[hash].js'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
