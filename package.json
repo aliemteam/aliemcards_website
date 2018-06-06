@@ -7,7 +7,7 @@
   "license": "CC-BY-NC-3.0",
   "scripts": {
     "build": "rm -rf dist/* && parcel build src/index.html",
-    "start": "parcel src/index.html",
+    "dev": "rm -rf dist/* && parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
