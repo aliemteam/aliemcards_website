@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 
-import './test.sass';
-
-const title = 'ALiEM Cards from Travis';
+const App = () => (
+  <div>
+    <h1>App Goes Here HMR</h1>
+  </div>
+);
 
 ReactDOM.render(
-  <div>{title}</div>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('app')
 );
