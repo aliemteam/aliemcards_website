@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './test.sass';
 
-const title = 'ALiEM Cards';
+const title = 'ALiEM Cards from Travis';
 
 ReactDOM.render(
   <div>{title}</div>,
