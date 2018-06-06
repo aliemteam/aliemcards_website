@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 
-const App = () => (
-  <div>
-    <h1>App Goes Here HMR</h1>
-  </div>
-);
+import App from './App/App';
+
+// const App = () => (
+//   <div>
+//     <h1>App Goes Here HMR</h1>
+//   </div>
+// );
 
 ReactDOM.render(
   <BrowserRouter>
