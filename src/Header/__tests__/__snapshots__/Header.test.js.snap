@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="header"
+    role="banner"
+  >
+    <div
+      className="header__logo"
+    >
+      <Link
+        replace={false}
+        to="/"
+      >
+        <img
+          src="logo.svg"
+        />
+      </Link>
+    </div>
+    <div
+      className="header__nav-button"
+    >
+      <button
+        className="hamburger hamburger__squeeze"
+        onClick={[Function]}
+      >
+        <span
+          className="hamburger__box"
+        >
+          <span
+            className="hamburger__inner"
+          />
+        </span>
+      </button>
+    </div>
+    <nav
+      className="header__nav header__nav--closed"
+      role="navigation"
+    >
+      <ul>
+        <li>
+          <Link
+            onClick={[Function]}
+            replace={false}
+            to="/cards"
+          >
+            Cards
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={[Function]}
+            replace={false}
+            to="/categories"
+          >
+            Categories
+          </Link>
+        </li>
+        <li>
+          <Link
+            onClick={[Function]}
+            replace={false}
+            to="/about"
+          >
+            About
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+`;
