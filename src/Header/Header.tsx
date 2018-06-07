@@ -1,10 +1,23 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
-// import Search from './Search';
-import logo from './logo.svg';
-import style from './style.sass';
+import { Link, Route } from 'react-router-dom';
 
-export default class Header extends React.PureComponent {
+import Search from '../Search/Search';
+
+const logo = require('./logo.svg');
+const style = require('./header.sass');
+
+interface Props {}
+// interface Props {
+//   location: {
+//     pathname: string;
+//   };
+// }
+
+interface State {
+  navDrawerOpen: boolean;
+}
+
+export default class Header extends React.PureComponent<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
@@ -66,8 +79,10 @@ export default class Header extends React.PureComponent {
             </ul>
           </nav>
         </div>
-        {/* <Search splashText={this.props.location.pathname === '/'} /> */}
       </div>
     );
   }
 }
+
+// wrap router to have access to location
+// export default withRouter(Header);
