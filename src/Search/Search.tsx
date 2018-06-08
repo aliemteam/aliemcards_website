@@ -1,13 +1,10 @@
 import * as React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 //import SearchResults from './SearchResults';
 
-// use require for non-javascript imports so TS isn't angry
 const loader = require('./loader.svg');
 const style = require('./search.sass');
-
-interface Props {}
 
 interface State {
   loading: boolean;
@@ -30,7 +27,7 @@ const splash = () => (
   </div>
 );
 
-export default class Search extends React.PureComponent<Props, State> {
+class Search extends React.PureComponent<{}, State> {
   static timer;
 
   constructor(props) {
@@ -72,7 +69,7 @@ export default class Search extends React.PureComponent<Props, State> {
   render() {
     return (
       <div className="search">
-        
+        <Route exact path="/" component={splash} />
         <div className="search__input" role="search">
           <input
             type="text"
@@ -94,3 +91,5 @@ export default class Search extends React.PureComponent<Props, State> {
     );
   }
 }
+
+export default withRouter(Search);

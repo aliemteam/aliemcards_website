@@ -11,11 +11,13 @@ const style = require('../Sass/base.sass');
 export default class App extends React.PureComponent {
   render() {
     return (
-        <div>
-          <Header />
-          <Route path="/" exact component={Home} />
-          <Route path="/cards" render={() => (<h1>CARDS</h1>)} />
-        </div>
+        <HashRouter>
+          <div>
+            <Header />
+            <Route path="/" exact component={Home} />
+            <Route path="/cards" render={() => (<h1>CARDS</h1>)} />
+          </div>
+        </HashRouter>
     )
   }
 }
