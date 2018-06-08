@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import Search from '../Search/Search';
 
@@ -10,7 +10,9 @@ interface State {
   navDrawerOpen: boolean;
 }
 
-export default class Header extends React.PureComponent<{}, State> {
+
+
+class Header extends React.PureComponent<{}, State> {
   constructor(props) {
     super(props);
     this.state = {
@@ -77,3 +79,5 @@ export default class Header extends React.PureComponent<{}, State> {
     );
   }
 }
+
+export default withRouter(Header);
