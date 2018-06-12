@@ -10,8 +10,6 @@ interface State {
   navDrawerOpen: boolean;
 }
 
-
-
 class Header extends React.PureComponent<{}, State> {
   constructor(props) {
     super(props);
