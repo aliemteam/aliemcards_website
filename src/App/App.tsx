@@ -15,8 +15,10 @@ export default class App extends React.PureComponent {
         <HashRouter>
           <div>
             <Header />
-            <Route path="/" exact component={Home} />
-            <Route path="/cards" render={() => (<h1>CARDS</h1>)} />
+            <main className="content container" role="main">
+              <Route path="/" exact component={Home} />
+              <Route path="/cards" render={() => (<h1>CARDS</h1>)} />
+            </main>
             <Footer />
           </div>
         </HashRouter>
