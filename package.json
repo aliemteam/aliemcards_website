@@ -15,6 +15,7 @@
     "@types/jest": "^23.0.2",
     "@types/node": "^10.3.1",
     "@types/react": "^16.3.16",
+    "axios": "^0.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
@@ -35,7 +36,7 @@
       "jsx",
       "json",
       "node",
-      "ts", 
+      "ts",
       "tsx"
     ],
     "moduleNameMapper": {
