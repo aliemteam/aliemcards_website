@@ -4,7 +4,7 @@ import { HashRouter, Route } from 'react-router-dom';
 
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-import Home from './Home/Home';
+import Home from './Home/HomeContainer';
 import Card from './Card/Card';
 
 // Base styles for whole app here
