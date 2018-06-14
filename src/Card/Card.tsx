@@ -1,5 +1,6 @@
 import * as React from 'react';
 import axios from 'axios';
+import marked from 'marked';
 
 import config from '../config';
 import { Card } from '../types';
@@ -35,7 +36,9 @@ export default class Home extends React.PureComponent<Props, State> {
   render() { 
     return (
       <div className="row row--wrap">
-        {this.state.card && this.state.card.body}
+      { this.state.card && (
+        <div dangerouslySetInnerHTML={{ __html: marked(this.state.card.body) }} />
+      )}
       </div>
     );
   }
