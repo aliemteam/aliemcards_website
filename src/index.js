@@ -5,7 +5,7 @@ import { HashRouter, Route } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import Home from './Home/HomeContainer';
-import Card from './Card/Card';
+import Card from './Card/CardContainer';
 
 // Base styles for whole app here
 const style = require('./Sass/base.sass');
