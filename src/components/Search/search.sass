@@ -1,0 +1,73 @@
+@import ../../Sass/variables
+
+.search
+    background: $primary
+    display: flex
+    box-shadow: $shadow-3dp, inset 0 5px 14px 0 rgba(0, 0, 0, .12)
+    flex-direction: column
+    align-items: center
+    margin: $block-margins
+    padding: $padding-size
+
+.search__splash-text
+    color: white
+    font-size: 1.5em
+    margin: $block-margins
+    max-width: 410px
+    text-align: center
+    & > div:last-child
+        font-size: .7em
+        font-weight: 300
+    a
+        color: white
+        font-weight: bold
+        &:hover
+            text-decoration: underline
+
+.search__input
+    max-width: 700px
+    width: 100%
+    display: flex
+    position: relative
+    height: 40px
+    input
+        width: 100%
+        color: $dark-gray
+
+.search__loader
+    position: absolute
+    top: -1em
+    right: -.5em
+    height: 70px
+    padding: 1em
+    margin: 0
+
+
+.search__results
+    max-width: 700px
+    width: 100%
+    ul
+        padding: 0
+        margin: 0
+
+.search__result
+    list-style: none
+    margin: 1rem 0
+    background-color: white
+    text-align: left
+    font-weight: bold
+    border-radius: 2px
+    a
+        display: block
+        padding: 1rem 2rem
+        color: $primary
+        text-decoration: none
+        transition: $shadow-transition
+        &:hover
+            background-color: $light-gray
+            color: $primary-shade
+            border-radius: 2px
+
+.search__noresult
+    color: $primary
+    padding: 1rem 2rem
