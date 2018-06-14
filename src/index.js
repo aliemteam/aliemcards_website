@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route } from 'react-router-dom';
 
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
 import Home from './Home/HomeContainer';
 import Card from './Card/CardContainer';
 

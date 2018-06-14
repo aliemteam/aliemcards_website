@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { CardSummary } from '../types';
 
-import CardList from '../components/CardList/CardList';
+import CardList from '../CardList/CardList';
 
 interface props {
   recentlyAdded: CardSummary[];
