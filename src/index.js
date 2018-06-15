@@ -6,6 +6,7 @@ import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import Home from './Home/HomeContainer';
 import Card from './Card/CardContainer';
+import Cards from './Cards/CardsContainer';
 
 // Base styles for whole app here
 const style = require('./Sass/base.sass');
@@ -18,7 +19,7 @@ class App extends React.PureComponent {
             <Header />
             <main className="content container" role="main">
               <Route path="/" exact component={Home} />
-              <Route path="/cards" exact render={() => (<h1>CARDS</h1>)} />
+              <Route path="/cards" exact component={Cards} />
               <Route path="/cards/:slug" component={Card} />
             </main>
             <Footer />

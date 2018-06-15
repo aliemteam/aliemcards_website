@@ -44,11 +44,6 @@ export interface Taxonomy {
 //   updates: number[] | null;
 // }
 
-export interface Category {
-  id: string;
-  name: string;
-}
-
 export enum OrderBy {
   created = 'created',
   updated = 'updated',

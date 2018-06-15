@@ -1,6 +1,8 @@
 export default {
   api: {
+    card: 'https://aliemteam.github.io/aliemcards_cards/cards',
+    categories: 'https://aliemteam.github.io/aliemcards_cards/categories.json',
     recent: 'https://aliemteam.github.io/aliemcards_cards/recent.json',
-    card: 'https://aliemteam.github.io/aliemcards_cards/cards'
+    summaries: 'https://aliemteam.github.io/aliemcards_cards/cardsummaries.json'
   }
 }
