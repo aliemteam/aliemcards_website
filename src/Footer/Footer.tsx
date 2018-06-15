@@ -5,7 +5,7 @@ const cc_icon = require('./by-nc-nd.svg');
 const styles = require('./footer.sass');
 
 export default () => (
-  <div className="footer" role="contentinfo">
+  <div className="footer" role="contentinfo"><div className="container">
     <div className="row footer__cc">
       <div className="footer__cc-image">
         <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">
@@ -40,5 +40,5 @@ export default () => (
         treatments.
       </div>
     </div>
-  </div>
+  </div></div>
 );
