@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { CardSummary, Category } from '../../types';
+import { CardSummary, Category } from '../types';
 
 const style = require('./cardlist.sass');
 
@@ -37,7 +37,7 @@ export default ({
           <Link to={`/cards/${card.slug}`} className="card-list__item-title">
             {card.title}
           </Link>{' '}
-          {/* {card.categories.map(category => (
+          {card.categories.map(category => (
             <Link
               to={`/categories/${category.slug}`}
               key={`${card.slug}-${category.slug}`}
@@ -45,7 +45,7 @@ export default ({
             >
               {category.name.toLowerCase()}
             </Link>
-          ))} */}
+          ))}
         </div>
       ))}
     </div>

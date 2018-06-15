@@ -21,17 +21,17 @@ export interface CardSummary {
   authors: [string],
   created: string,
   updates: [string],
-  categories: [string]
+  categories: Taxonomy[]
 }
 
 export interface Card extends CardSummary {
   body: string
 }
 
-interface Taxonomy {
+export interface Taxonomy {
   slug?: string,
   name: string,
-  cards: [Card]
+  cards?: [Card]
 }
 
 // export interface Card {

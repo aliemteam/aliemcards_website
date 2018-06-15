@@ -31,10 +31,11 @@ export default class HomeContainer extends React.PureComponent<{}, State> {
 
   render() { 
     return (
-      <Home
-        recentlyAdded={this.state.recentlyAdded}
-        recentlyUpdated={this.state.recentlyUpdated}
-      />
+      <div>
+        { this.state.recentlyAdded ? 
+          <Home recentlyAdded={this.state.recentlyAdded} recentlyUpdated={this.state.recentlyUpdated} />
+          : null }
+      </div>
     );
   }
 }

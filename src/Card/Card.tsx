@@ -32,7 +32,7 @@ export default class CardPage extends React.PureComponent<Props> {
           <div className="card__meta">
             <div>
               <strong>{this.props.card.authors.length > 1 ? 'Authors: ' : 'Author: '}</strong>
-              {this.props.card.authors.map(author => author.name).join(', ')}
+              {this.props.card.authors.join(', ')}
             </div>
             <div>
               <strong>Updated:</strong> {lastUpdate}
