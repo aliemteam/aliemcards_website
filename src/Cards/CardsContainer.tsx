@@ -4,7 +4,7 @@ import axios from 'axios';
 import config from '../config';
 import { CardSummary, Taxonomy } from '../types';
 
-import CardList from '../CardList/CardList';
+import CardListWithFilter from '../CardList/CardListWithFilter';
 
 interface State {
   cards: CardSummary[],
@@ -35,7 +35,7 @@ export default class HomeContainer extends React.PureComponent<{}, State> {
     return (
       <div>
         { this.state.cards && this.state.cats ? 
-          <CardList filter cards={this.state.cards} categories={this.state.cats} /> 
+          <CardListWithFilter cards={this.state.cards} taxonomy={this.state.cats} /> 
           : null 
         }
       </div>
