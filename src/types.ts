@@ -31,7 +31,7 @@ export interface Card extends CardSummary {
 export interface Taxonomy {
   slug?: string,
   name: string,
-  cards?: [Card]
+  cards?: CardSummary[]
 }
 
 // export interface Card {

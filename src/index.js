@@ -7,6 +7,7 @@ import Header from './Header/Header';
 import Home from './Home/HomeContainer';
 import Card from './Card/CardContainer';
 import Cards from './Cards/CardsContainer';
+import Categories from './Categories/CategoriesContainer';
 
 // Base styles for whole app here
 const style = require('./Sass/base.sass');
@@ -21,6 +22,7 @@ class App extends React.PureComponent {
               <Route path="/" exact component={Home} />
               <Route path="/cards" exact component={Cards} />
               <Route path="/cards/:slug" component={Card} />
+              <Route path="/categories" component={Categories} />
             </main>
             <Footer />
           </div>
