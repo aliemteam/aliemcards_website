@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Link, Route, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
-import CardList from '../CardList/CardList';
 import Categories from './Categories';
 import Category from './Category';
+import Loader from '../Loader/Loader';
 
 import config from '../config';
 import { CardSummary, Taxonomy } from '../types';
@@ -34,7 +34,10 @@ class CategoriesContainer extends React.PureComponent<{}, State> {
   render() { 
     return (
       <div>
-        {this.state.cats && <Route path="/categories" exact render={(props) => <Categories {...props} categories={this.state.cats} />} /> }
+        {this.state.cats.length > 0 ? 
+          <Route path="/categories" exact render={(props) => <Categories {...props} categories={this.state.cats} />} /> 
+          : <Loader />
+        }
         <Route path="/categories/:cat" exact render={(props) => <Category {...props} cats={this.state.cats} />} />
       </div>
     );

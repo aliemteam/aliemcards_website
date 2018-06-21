@@ -5,6 +5,7 @@ import config from '../config';
 import { CardSummary } from '../types';
 
 import Home from './Home';
+import Loader from '../Loader/Loader';
 
 interface State {
   recentlyAdded: CardSummary[];
@@ -34,7 +35,7 @@ export default class HomeContainer extends React.PureComponent<{}, State> {
       <div>
         { this.state.recentlyAdded ? 
           <Home recentlyAdded={this.state.recentlyAdded} recentlyUpdated={this.state.recentlyUpdated} />
-          : null }
+          : <Loader /> }
       </div>
     );
   }

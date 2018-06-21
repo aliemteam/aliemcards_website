@@ -49,7 +49,7 @@ export default class SearchResultsContainer extends React.PureComponent<Props, S
 
   render() { 
     return (
-      <div>
+      <div className="search__results">
         { !this.state.loading && <SearchResults onClick={this.props.onClick} cards={this.state.cards} /> }
       </div>
     );
