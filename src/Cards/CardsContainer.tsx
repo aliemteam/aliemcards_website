@@ -8,16 +8,16 @@ import CardListWithFilter from '../CardList/CardListWithFilter';
 import Loader from '../Loader/Loader';
 
 interface State {
-  cards: CardSummary[],
-  cats: Taxonomy[]
+  cards: CardSummary[] | null,
+  cats: Taxonomy[] | null
 }
 
 export default class HomeContainer extends React.PureComponent<{}, State> {
   constructor(props) {
     super(props);
     this.state = {
-      cards: [],
-      cats: []
+      cards: null,
+      cats: null
     }
   }
 
@@ -35,7 +35,7 @@ export default class HomeContainer extends React.PureComponent<{}, State> {
   render() { 
     return (
       <div>
-        { this.state.cards.length > 0 && this.state.cats.length > 0 ? 
+        { this.state.cards && this.state.cats ? 
           <CardListWithFilter cards={this.state.cards} taxonomy={this.state.cats} /> 
           : <Loader />
         }

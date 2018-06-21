@@ -11,7 +11,7 @@ import { CardSummary, Taxonomy } from '../types';
 
 interface State {
   cards: CardSummary[],
-  cats: Taxonomy[]
+  cats: Taxonomy[] | null
 }
 
 class CategoriesContainer extends React.PureComponent<{}, State> {
@@ -19,7 +19,7 @@ class CategoriesContainer extends React.PureComponent<{}, State> {
     super(props);
     this.state = {
       cards: [],
-      cats: []
+      cats: null
     }
   }
 
@@ -34,7 +34,7 @@ class CategoriesContainer extends React.PureComponent<{}, State> {
   render() { 
     return (
       <div>
-        {this.state.cats.length > 0 ? 
+        {this.state.cats ? 
           <Route path="/categories" exact render={(props) => <Categories {...props} categories={this.state.cats} />} /> 
           : <Loader />
         }

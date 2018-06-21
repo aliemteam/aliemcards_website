@@ -8,6 +8,7 @@ import Home from './Home/HomeContainer';
 import Card from './Card/CardContainer';
 import Cards from './Cards/CardsContainer';
 import Categories from './Categories/CategoriesContainer';
+import About from './About/About';
 
 // Base styles for whole app here
 const style = require('./Sass/base.sass');
@@ -23,6 +24,7 @@ class App extends React.Component {
               <Route path="/cards" exact component={Cards} />
               <Route path="/cards/:slug" exact component={Card} />
               <Route path="/categories" component={Categories} />
+              <Route path="/about" component={About} />
             </main>
             <Footer />
           </div>
