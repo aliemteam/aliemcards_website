@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, withRouter } from 'react-router-dom';
 
-//import SearchResults from './SearchResults';
+import SearchResults from './SearchResultsContainer';
 
 const loader = require('./loader.svg');
 const style = require('./search.sass');
@@ -60,10 +60,8 @@ class Search extends React.PureComponent<{}, State> {
     this.setState({ query: '', uiQuery: '', loading: false });
   };
 
-  handleLoadingStatus = (status: number) => {
-    if (status > 6) {
-      this.setState({ loading: false });
-    }
+  handleLoadingStatus = (loading: boolean) => {
+      this.setState({ loading });
   };
 
   render() {
@@ -82,11 +80,11 @@ class Search extends React.PureComponent<{}, State> {
             <img className="search__loader" src={loader} alt="loader" />
           )}
         </div>
-        {/* <SearchResults
+        { this.state.query && (<SearchResults
           query={this.state.query}
           onClick={this.handleClick}
           loadStatus={this.handleLoadingStatus}
-        /> */}
+        />)}
       </div>
     );
   }

@@ -12,7 +12,7 @@ import Categories from './Categories/CategoriesContainer';
 // Base styles for whole app here
 const style = require('./Sass/base.sass');
 
-class App extends React.PureComponent {
+class App extends React.Component {
   render() {
     return (
         <HashRouter>
@@ -21,7 +21,7 @@ class App extends React.PureComponent {
             <main className="content container" role="main">
               <Route path="/" exact component={Home} />
               <Route path="/cards" exact component={Cards} />
-              <Route path="/cards/:slug" component={Card} />
+              <Route path="/cards/:slug" exact component={Card} />
               <Route path="/categories" component={Categories} />
             </main>
             <Footer />
