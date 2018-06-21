@@ -31,7 +31,11 @@ export default class HomeContainer extends React.Component<Props, State> {
     axios.get(`${config.api.card}/${this.props.match.params.slug}.json`)
       .then(res => {
         this.setState({ card: res.data });
-    });
+      })
+      .catch(() => ({
+        status: 501,
+        statusText: 'Server error encountered.',
+      }));
   }
 
   componentDidUpdate(prevProps) {

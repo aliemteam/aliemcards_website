@@ -25,11 +25,20 @@ export default class HomeContainer extends React.PureComponent<{}, State> {
     axios.get(config.api.summaries)
       .then(res => {
         this.setState({ cards: res.data.card_summaries });
-      });
+      })
+      .catch(() => ({
+        status: 501,
+        statusText: 'Server error encountered.',
+      }));
+    
     axios.get(config.api.categories)
       .then(res => {
         this.setState({ cats: res.data.categories });
-      });
+      })
+      .catch(() => ({
+        status: 501,
+        statusText: 'Server error encountered.',
+      }));
   }
 
   render() { 

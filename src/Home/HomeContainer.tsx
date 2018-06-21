@@ -27,7 +27,11 @@ export default class HomeContainer extends React.PureComponent<{}, State> {
         const recentlyAdded = res.data.created;
         const recentlyUpdated = res.data.updates;
         this.setState({ recentlyAdded, recentlyUpdated });
-      });
+      })
+      .catch(() => ({
+        status: 501,
+        statusText: 'Server error encountered.',
+      }));
   }
 
   render() { 

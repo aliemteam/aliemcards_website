@@ -36,7 +36,11 @@ export default class SearchResultsContainer extends React.PureComponent<Props, S
       console.log(res.data);
       this.props.loadStatus(false);
       this.setState({ loading: false, cards: res.data.cards });
-    });
+    })
+    .catch(() => ({
+      status: 501,
+      statusText: 'Server error encountered.',
+    }));
   }
 
   componentDidUpdate(prevProps) {

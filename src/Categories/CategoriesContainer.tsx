@@ -28,7 +28,11 @@ class CategoriesContainer extends React.PureComponent<{}, State> {
       .then(res => {
         console.log(res.data);
         this.setState({ cats: res.data.categories });
-      });
+      })
+      .catch(() => ({
+        status: 501,
+        statusText: 'Server error encountered.',
+      }));
   }
 
   render() { 
