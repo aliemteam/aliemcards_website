@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link, Route, withRouter } from 'react-router-dom';
 import axios from 'axios';
 
 import Categories from './Categories';
@@ -9,12 +8,20 @@ import Loader from '../Loader/Loader';
 import config from '../config';
 import { CardSummary, Taxonomy } from '../types';
 
+interface Props {
+  match: {
+    params: {
+      cat?: string;
+    }
+  }
+}
+
 interface State {
   cards: CardSummary[],
   cats: Taxonomy[] | null
 }
 
-class CategoriesContainer extends React.PureComponent<{}, State> {
+export default class CategoriesContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,14 +45,16 @@ class CategoriesContainer extends React.PureComponent<{}, State> {
   render() { 
     return (
       <div>
-        {this.state.cats ? 
-          <Route path="/categories" exact render={(props) => <Categories {...props} categories={this.state.cats} />} /> 
-          : <Loader />
+        {!this.props.match.params.cat && this.state.cats && 
+          <Categories categories={this.state.cats} />
         }
-        <Route path="/categories/:cat" exact render={(props) => <Category {...props} cats={this.state.cats} />} />
+        {this.props.match.params.cat && this.state.cats &&
+          <Category cats={this.state.cats} cat={this.props.match.params.cat} />
+        }
+        {!this.state.cats &&
+          <Loader />
+        }
       </div>
     );
   }
 }
-
-export default withRouter(CategoriesContainer);

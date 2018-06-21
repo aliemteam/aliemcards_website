@@ -23,7 +23,8 @@ class App extends React.Component {
               <Route path="/" exact component={Home} />
               <Route path="/cards" exact component={Cards} />
               <Route path="/cards/:slug" exact component={Card} />
-              <Route path="/categories" component={Categories} />
+              <Route path="/categories" exact component={Categories} />
+              <Route path="/categories/:cat" component={Categories} />
               <Route path="/about" component={About} />
             </main>
             <Footer />
