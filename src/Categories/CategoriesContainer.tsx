@@ -1,12 +1,12 @@
 import * as React from 'react';
 import axios from 'axios';
 
+import config from '../config';
+import { Taxonomy } from '../types';
+
 import Categories from './Categories';
 import Category from './Category';
 import Loader from '../Loader/Loader';
-
-import config from '../config';
-import { CardSummary, Taxonomy } from '../types';
 
 interface Props {
   match: {
@@ -17,7 +17,6 @@ interface Props {
 }
 
 interface State {
-  cards: CardSummary[],
   cats: Taxonomy[] | null
 }
 
@@ -25,7 +24,6 @@ export default class CategoriesContainer extends React.Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
-      cards: [],
       cats: null
     }
   }
