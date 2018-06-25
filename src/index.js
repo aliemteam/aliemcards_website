@@ -18,7 +18,7 @@ class App extends React.Component {
   render() {
     return (
         <HashRouter>
-          <div>
+          <div className="row--stacked">
             <Header />
             <main className="content container" role="main">
               <Switch>
