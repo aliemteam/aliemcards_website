@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 
 import AboutBio, { BioProps } from './AboutBio';
+import Contact from '../Contact/Contact';
 
 const team: BioProps[] = [
   {
@@ -81,12 +81,13 @@ export default () => (
     <p>This website is the next iteration of that project.</p>
     <h2>Help us improve this resource</h2>
     <p>
-      Please <Link to="/contact">let us know</Link> how you use these cards. What would make them
-      more useful? Found an error? Help us fix it!
+      Please let us know how you use these cards. What would make them
+      more useful? Found an error? Help us fix it! Email us at <a href="mailto:info@aliem.com">info@aliem.com</a>.
     </p>
     <h2>The ALiEM Cards Team</h2>
     <div className="row row--wrap">
       {team.map(member => <AboutBio key={member.name} {...member} />)}
     </div>
+    <Contact />
   </div>
 );

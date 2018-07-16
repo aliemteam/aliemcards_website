@@ -10,6 +10,7 @@ import Cards from './Cards/CardsContainer';
 import Categories from './Categories/CategoriesContainer';
 import About from './About/About';
 import FourOhFour from './404/404';
+import Contact from './Contact/Contact';
 
 // Base styles for whole app here
 const style = require('./Sass/base.sass');
@@ -28,6 +29,7 @@ class App extends React.Component {
                 <Route path="/categories" exact component={Categories} />
                 <Route path="/categories/:cat" component={Categories} />
                 <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} />
                 <Route exact component={FourOhFour} />
               </Switch>
             </main>
