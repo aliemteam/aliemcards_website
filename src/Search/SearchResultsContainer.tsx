@@ -29,7 +29,7 @@ export default class SearchResultsContainer extends React.PureComponent<Props, S
   handleAJAX() {
     axios({
       method: 'get',
-      url: `${config.api.search}/${encodeURI(this.props.query)}`,
+      url: `${config.api.search}${encodeURI(this.props.query)}`,
       headers: { 'Content-Type': 'application/json' }
     })
     .then(res => {
