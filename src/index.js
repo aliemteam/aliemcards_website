@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Helmet } from 'react-helmet';
 import { HashRouter, Route, Switch, withRouter } from 'react-router-dom';
 
 import Announcement from './Announcement/Announcement';
@@ -32,11 +33,21 @@ class ScrollToTop extends React.Component {
 const ScrollToTopWithRouter = withRouter(ScrollToTop);
 
 class App extends React.Component {
+  static structuredData = {
+    '@context': 'http://schema.org',
+    '@type': 'WebSite',
+    name: 'ALiEM Cards',
+    url: 'https://www.aliemcards.com',
+  };
+
   render() {
     return (
         <HashRouter>
           <ScrollToTopWithRouter>
             <div className="row--stacked">
+              <Helmet>
+                <script type="application/ld+json">{JSON.stringify(App.structuredData)}</script>
+              </Helmet>
               <Header />
               <Announcement />
               <main className="content container" role="main">

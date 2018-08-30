@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import marked from 'marked';
 
 import { Card } from '../types';
@@ -74,9 +75,9 @@ class CardPage extends React.PureComponent<Props> {
 
     return (
       <article role="article">
-        {/* <Helmet>
-          <script type="application/ld+json">{JSON.stringify({ headline: card.title })}</script>
-        </Helmet> */}
+        <Helmet>
+          <script type="application/ld+json">{JSON.stringify({ headline: this.props.card.title })}</script>
+        </Helmet>
         <h1>{this.props.card.title}</h1>
         <div className="card">
           <div className="card__meta">
