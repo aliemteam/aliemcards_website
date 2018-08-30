@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch, withRouter } from 'react-router-dom';
 
+import Announcement from './Announcement/Announcement';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
 import Home from './Home/HomeContainer';
@@ -37,6 +38,7 @@ class App extends React.Component {
           <ScrollToTopWithRouter>
             <div className="row--stacked">
               <Header />
+              <Announcement />
               <main className="content container" role="main">
                 <Switch>
                   <Route path="/" exact component={Home} />
