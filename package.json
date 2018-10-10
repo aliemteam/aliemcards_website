@@ -6,49 +6,20 @@
   "author": "Jeremy Voros",
   "license": "CC-BY-NC-3.0",
   "scripts": {
-    "build": "rm -rf dist/* && parcel build src/index.html",
-    "build:ghp": "rm -rf dist/* && parcel build src/index.html --public-url ./",
-    "dev": "rm -rf dist/* && parcel src/index.html",
-    "test": "jest"
+    "next": "next",
+    "build": "next build",
+    "export": "next export",
+    "dev:static": "yarn build && yarn export && http-serve out",
+    "getapi": "rm -rf apicache && mkdir apicache && node api/getapi.js"
   },
   "dependencies": {
-    "@types/jest": "^23.0.2",
-    "@types/node": "^10.3.1",
-    "@types/react": "^16.3.16",
+    "@zeit/next-sass": "^1.0.1",
     "axios": "^0.18.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "jest": "^23.1.0",
     "marked": "^0.4.0",
+    "next": "^7.0.1",
     "node-sass": "^4.9.0",
-    "parcel-bundler": "^1.8.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-helmet": "^5.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-test-renderer": "^16.4.0",
-    "ts-jest": "^22.4.6",
-    "typescript": "^2.9.1"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "js",
-      "jsx",
-      "json",
-      "node",
-      "ts",
-      "tsx"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|less)$": "identity-obj-proxy"
-    },
-    "transform": {
-      "^.+\\.js$": "babel-jest",
-      "^.+\\.jsx$": "babel-jest",
-      "^.+\\.tsx?$": "ts-jest",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|css|sass)$": "<rootDir>/utils/fileTransformer.js"
-    }
+    "react-helmet": "^5.2.0"
   }
 }
