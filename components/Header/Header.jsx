@@ -2,6 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import './header.sass';
 
+import Head from '../Head/Head';
 import Search from '../Search/Search';
 
 class Header extends React.PureComponent {
@@ -19,6 +20,7 @@ class Header extends React.PureComponent {
   render() {
     return (
       <div>
+        <Head />
         <div className="header" role="banner">
           <div className="header__logo">
             <Link href="/">
