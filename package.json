@@ -9,6 +9,7 @@
     "next": "next",
     "build": "next build",
     "export": "next export",
+    "static": "yarn build && yarn export",
     "dev:static": "yarn build && yarn export && http-serve out",
     "getapi": "rm -rf apicache && mkdir apicache && node api/getapi.js"
   },
