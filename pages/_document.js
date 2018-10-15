@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'UA-XXXXXXXX-X');
+        gtag('config', 'UA-124875540-1');
       `
     };
   }
@@ -29,6 +29,7 @@ export default class MyDocument extends Document {
     const { isProduction } = this.props;
     return (
       <html>
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
