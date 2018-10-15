@@ -1,0 +1,69 @@
+.card__meta {
+  display: flex;
+  font-size: .8em;
+  margin: 0 0 20px 0; }
+  .card__meta > div {
+    color: #333;
+    background: #f2f2f2;
+    padding: 5px 10px;
+    margin: 0 5px; }
+    .card__meta > div:first-of-type {
+      margin-left: 0; }
+    .card__meta > div:last-of-type {
+      margin-right: 0; }
+
+.card__content h1:first-of-type {
+  display: none; }
+
+.drug {
+  color: #D60B70;
+  font-weight: bold; }
+
+.taxonomy-list a {
+  text-decoration: none;
+  color: #706d6e; }
+  .taxonomy-list a:hover {
+    color: #00b092; }
+
+#references {
+  background-color: #f2f2f2;
+  border: 0;
+  margin: 40px 0 0 0;
+  border-radius: 2px 2px 0 0;
+  color: #333;
+  padding: 20px;
+  padding-bottom: 0; }
+  #references + ul, #references + ol {
+    margin-top: 0;
+    background-color: #f2f2f2;
+    border-radius: 0 0 2px 2px;
+    padding: 20px 40px; }
+    #references + ul li, #references + ol li {
+      margin-bottom: 20px; }
+
+.card-list {
+  font-size: 20px; }
+
+.card-list__item {
+  padding: 10px 10px 10px 5px;
+  border-bottom: 1px solid #f2f2f2; }
+
+.card-list__item-title {
+  color: #706d6e; }
+  .card-list__item-title:hover {
+    color: #345995; }
+
+.card-list__item-meta {
+  background: #f2f2f2;
+  color: #706d6e;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+  margin: 5px;
+  vertical-align: middle;
+  transition: all 0.1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  white-space: nowrap; }
+  .card-list__item-meta:hover {
+    color: white;
+    background-color: #706d6e; }
+
