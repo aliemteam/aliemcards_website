@@ -10,8 +10,7 @@
     "build": "next build",
     "export": "next export",
     "static": "yarn build && yarn export",
-    "dev:static": "yarn build && yarn export && http-serve out",
-    "getapi": "rm -rf apicache && mkdir apicache && node api/getapi.js"
+    "dev:static": "yarn build && yarn export && http-serve out"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",

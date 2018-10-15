@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+- node
+cache:
+  directories:
+    - node_modules
+script: yarn install
+after_success:
+- yarn static
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    local-dir: out
+    github-token: $GITHUB_TOKEN
+    on:
+      branch: master
